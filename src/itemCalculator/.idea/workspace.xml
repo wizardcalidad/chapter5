@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="811b36c8-5347-44dd-9d5d-0feab8bd6971" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1W89w3X3viOcyddLfxGEwh5uULx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$/eclipse-workspace/creditCalculator/src/creditLimit/itemCalculator.java" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="itemCalculator" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="811b36c8-5347-44dd-9d5d-0feab8bd6971" name="Default Changelist" comment="" />
+      <created>1578520589917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578520589917</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="395" y="125" width="800" height="676" key="#Vim_Emulation" timestamp="1578573985612">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="395" y="125" width="800" height="676" key="#Vim_Emulation/0.27.1600.873@0.27.1600.873" timestamp="1578573985612" />
+    <state x="258" y="121" width="1084" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578573953258">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="258" y="121" width="1084" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1600.873@0.27.1600.873" timestamp="1578573953258" />
+    <state x="583" y="221" width="424" height="483" key="FileChooserDialogImpl" timestamp="1578551736524">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="583" y="221" width="424" height="483" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1578551736524" />
+    <state x="456" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1578551750963">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="456" y="291" key="com.intellij.ide.util.TipDialog/0.27.1600.873@0.27.1600.873" timestamp="1578551750963" />
+  </component>
+</project>

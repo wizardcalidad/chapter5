@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_mileage" default="compile.module.mileage">
+  <dirname property="module.mileage.basedir" file="${ant.file.module_mileage}"/>
+  
+  <property name="module.jdk.home.mileage" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.mileage" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.mileage" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.mileage" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="mileage.output.dir" value="${module.mileage.basedir}/out/production/MileAge"/>
+  <property name="mileage.testoutput.dir" value="${module.mileage.basedir}/out/test/MileAge"/>
+  
+  <path id="mileage.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="mileage.module.production.classpath">
+    <path refid="${module.jdk.classpath.mileage}"/>
+  </path>
+  
+  <path id="mileage.runtime.production.module.classpath">
+    <pathelement location="${mileage.output.dir}"/>
+  </path>
+  
+  <path id="mileage.module.classpath">
+    <path refid="${module.jdk.classpath.mileage}"/>
+    <pathelement location="${mileage.output.dir}"/>
+  </path>
+  
+  <path id="mileage.runtime.module.classpath">
+    <pathelement location="${mileage.testoutput.dir}"/>
+    <pathelement location="${mileage.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.mileage">
+    <patternset refid="ignored.files"/>
+    <exclude name="out/**"/>
+    <exclude name="out/production/**"/>
+    <exclude name="out/production/MileAge/**"/>
+    <exclude name="out/production/MileAge/.idea/**"/>
+    <exclude name="out/production/MileAge/.idea/codeStyles/**"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.mileage">
+    <patternset refid="excluded.from.module.mileage"/>
+  </patternset>
+  
+  <path id="mileage.module.sourcepath">
+    <dirset dir="${module.mileage.basedir}/../../semicolon">
+      <include name="MileAge"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.mileage" depends="compile.module.mileage.production,compile.module.mileage.tests" description="Compile module MileAge"/>
+  
+  <target name="compile.module.mileage.production" depends="register.custom.compilers" description="Compile module MileAge; production classes">
+    <mkdir dir="${mileage.output.dir}"/>
+    <javac2 destdir="${mileage.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.mileage}/javac">
+      <compilerarg line="${compiler.args.mileage}"/>
+      <bootclasspath refid="mileage.module.bootclasspath"/>
+      <classpath refid="mileage.module.production.classpath"/>
+      <src refid="mileage.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.mileage"/>
+    </javac2>
+    
+    <copy todir="${mileage.output.dir}">
+      <fileset dir="${module.mileage.basedir}">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.mileage.tests" depends="register.custom.compilers,compile.module.mileage.production" description="compile module MileAge; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.mileage" description="cleanup module">
+    <delete dir="${mileage.output.dir}"/>
+    <delete dir="${mileage.testoutput.dir}"/>
+  </target>
+</project>
